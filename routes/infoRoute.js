@@ -176,7 +176,7 @@ async function getAccess(refreshToken) {
     process.env.GOOGLE_CLIENT_ID,
     // "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",
     process.env.GOOGLE_CLIENT_SECRET,
-    "http://localhost:3000/auth/getToken")
+    "https://frontend-datahack.vercel.app//auth/getToken")
   oauth2Client.setCredentials({ refresh_token: refreshToken });
   return await oauth2Client.getAccessToken();
 };

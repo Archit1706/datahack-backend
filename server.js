@@ -13,6 +13,7 @@ const meals = require("./routes/mealsRoute");
 const chat = require("./routes/chatRoute");
 const friends = require("./routes/friendRoute");
 const notify = require("./routes/notifyRoute");
+// const openai = require("./routes/openaiRoute");
 
 
 app.use("/api/users", usersRoute);
@@ -22,6 +23,7 @@ app.use("/api/meals/", meals);
 app.use("/api/chat/", chat);
 app.use("/api/friend/", friends);
 app.use("/api/notify/", notify);
+// app.use("/api/openai", openai)
 
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));

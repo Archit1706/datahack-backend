@@ -14,7 +14,7 @@ router.get("/getURL", async (req, res) => {
     process.env.GOOGLE_CLIENT_ID,
     // "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",
     process.env.GOOGLE_CLIENT_SECRET,
-    "http://localhost:3000/auth/getToken"
+    "https://frontend-datahack.vercel.app//auth/getToken"
   )
   const scopes = ["https://www.googleapis.com/auth/fitness.activity.read"
   /*, "https://www.googleapis.com/auth/fitness.blood_glucose.read", "https://www.googleapis.com/auth/fitness.blood_pressure.read", "https://www.googleapis.com/auth/fitness.heart_rate.read", "https://www.googleapis.com/auth/fitness.body_temperature.read", "https://www.googleapis.com/auth/fitness.location.read", "https://www.googleapis.com/auth/fitness.nutrition.read", "https://www.googleapis.com/auth/fitness.oxygen_saturation.read"*/]
@@ -40,7 +40,7 @@ router.post("/setToken", async (req, res) => {
     // "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",
     process.env.GOOGLE_CLIENT_SECRET,
     // "https://powerup.sidd065.repl.co/auth/getToken"
-    "http://localhost:3000/auth/getToken"
+    "https://frontend-datahack.vercel.app//auth/getToken"
   )
   const refresh = await oauth2Client.getToken(token);
   try {
